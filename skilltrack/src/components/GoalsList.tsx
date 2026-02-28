@@ -1,5 +1,5 @@
 import './GoalsList.css';
-import Button from './ButtonCTA.tsx';
+import ButtonSecondary from './ButtonSecondary.tsx';
 import { Pagination } from './Pagination.tsx';
 
 export function GoalsList() {
@@ -12,7 +12,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 30 de junio de 2026
                 </div>
-                <Button>+</Button>
+                <ButtonSecondary>+</ButtonSecondary>
             </div>
 
             <div className='goal-list-item'>
@@ -21,7 +21,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 15 de diciembre de 2026
                 </div>
-                <Button>+</Button>
+                <ButtonSecondary>+</ButtonSecondary>
             </div>
 
             <div className='goal-list-item'>
@@ -30,7 +30,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 31 de diciembre de 2026
                 </div>
-                <Button>+</Button>
+                <ButtonSecondary>+</ButtonSecondary>
             </div>
 
             <div className='goal-list-item'>
@@ -39,7 +39,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 1 de agosto de 2027
                 </div>
-                <Button>+</Button>
+                <ButtonSecondary>+</ButtonSecondary>
             </div>
 
             <div className='goal-list-item'>
@@ -48,7 +48,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 1 de marzo de 2027
                 </div>
-                <Button>+</Button>
+                <ButtonSecondary>+</ButtonSecondary>
             </div>
 
             <div className='goal-list-item'>
@@ -57,7 +57,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 31 de diciembre de 2026
                 </div>
-                <Button>+</Button>
+                <ButtonSecondary>+</ButtonSecondary>
             </div>
 
             <div className='goal-list-item'>
@@ -66,7 +66,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 30 de septiembre de 2026
                 </div>
-                <Button>+</Button>
+                <ButtonSecondary>+</ButtonSecondary>
             </div>
 
             <div className='goal-list-item'>
@@ -75,7 +75,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 15 de noviembre de 2026
                 </div>
-                <Button>+</Button>
+                <ButtonSecondary>+</ButtonSecondary>
             </div>
 
             <div className='goal-list-item'>
@@ -84,7 +84,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 1 de mayo de 2026
                 </div>
-                <Button>+</Button>
+                <ButtonSecondary>+</ButtonSecondary>
             </div>
 
             <div className='goal-list-item'>
@@ -93,7 +93,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 20 de octubre de 2026
                 </div>
-                <Button>+</Button>
+                <ButtonSecondary>+</ButtonSecondary>
             </div>
 
             <div className='goal-list-item'>
@@ -102,7 +102,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 30 de julio de 2027
                 </div>
-                <Button>+</Button>
+                <ButtonSecondary>+</ButtonSecondary>
             </div>
 
             <div className='goal-list-item'>
@@ -111,7 +111,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 15 de abril de 2027
                 </div>
-                <Button>+</Button>
+                <ButtonSecondary>+</ButtonSecondary>
             </div>
 
             <div className='goal-list-item'>
@@ -120,7 +120,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 31 de enero de 2027
                 </div>
-                <Button>+</Button>
+                <ButtonSecondary>+</ButtonSecondary>
             </div>
 
             <div className='goal-list-item'>
@@ -129,7 +129,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 1 de junio de 2026
                 </div>
-                <Button>+</Button>
+                <ButtonSecondary>+</ButtonSecondary>
             </div>
 
             <div className='goal-list-item'>
@@ -138,7 +138,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 10 de diciembre de 2027
                 </div>
-                <Button>+</Button>
+                <ButtonSecondary>+</ButtonSecondary>
             </div>
 
             <div className='goal-list-item'>
@@ -147,7 +147,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 30 de septiembre de 2026
                 </div>
-                <Button>+</Button>
+                <ButtonSecondary>+</ButtonSecondary>
             </div>
 
             <div className='goal-list-item'>
@@ -156,7 +156,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 31 de diciembre de 2026
                 </div>
-                <Button>+</Button>
+                <ButtonSecondary>+</ButtonSecondary>
             </div>
 
             <div className='goal-list-item'>
@@ -165,7 +165,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 1 de febrero de 2027
                 </div>
-                <Button>+</Button>
+                <ButtonSecondary>+</ButtonSecondary>
             </div>
 
             <div className='goal-list-item'>
@@ -174,7 +174,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 15 de agosto de 2027
                 </div>
-                <Button>+</Button>
+                <ButtonSecondary>+</ButtonSecondary>
             </div>
 
             <div className='goal-list-item'>
@@ -183,7 +183,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 30 de noviembre de 2026
                 </div>
-                <Button>+</Button>
+                <ButtonSecondary>+</ButtonSecondary>
             </div>
             <Pagination></Pagination>
         </section>
