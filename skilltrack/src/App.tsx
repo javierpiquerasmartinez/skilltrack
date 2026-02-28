@@ -1,5 +1,6 @@
-import FirstGoalHero from './components/FirstGoalHero'
-import Header from './components/Header'
+import FirstGoalHero from './components/FirstGoalHero.tsx'
+import Header from './components/Header.tsx'
+import { GoalsList } from './components/GoalsList.tsx'
 import './App.css'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Header></Header>
       <main>
         <FirstGoalHero></FirstGoalHero>
+        <GoalsList></GoalsList>
       </main>
     </>
   )

@@ -1,5 +1,6 @@
-import Button from "./Button"
-function FirstGoalHero() {
+import Button from "./Button.tsx"
+
+export default function FirstGoalHero() {
     return (
         <>
             <div>
@@ -9,5 +10,3 @@ function FirstGoalHero() {
         </>
     )
 }
-
-export default FirstGoalHero
