@@ -1,16 +1,15 @@
 .goal-list-item {
     box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
     background: var(--surface-1);
     border: 1px solid var(--border);
     border-radius: 0.5rem;
-    padding: 0.2rem;
+    padding: 0.2rem 1rem;
     width: 100%;
-
+    display: grid;
+    grid-template-columns: 1fr 5fr 2fr auto;
+    align-items: center;
+    justify-items: start;
+    gap: 0.5rem;
 }
 
 section {

@@ -1,4 +1,5 @@
 import './GoalsList.css';
+import Button from './Button.tsx';
 
 export function GoalsList() {
     return (
@@ -10,6 +11,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 31 de diciembre de 2024
                 </div>
+                <Button>+</Button>
             </div>
             <div className='goal-list-item'>
                 <p>Objetivo 2</p>
@@ -17,6 +19,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 31 de diciembre de 2024
                 </div>
+                <Button>+</Button>
             </div>
             <div className='goal-list-item'>
                 <p>Objetivo 3</p>
@@ -24,6 +27,7 @@ export function GoalsList() {
                 <div>
                     Fecha de meta: 31 de diciembre de 2024
                 </div>
+                <Button>+</Button>
             </div>
         </section>
     )
