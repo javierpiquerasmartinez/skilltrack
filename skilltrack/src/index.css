@@ -1,7 +1,6 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  color-scheme: dark;
 
   /* Color variables */
   --bg-color: #0B1220;
@@ -29,40 +28,11 @@
   --success-active: #4D7C0F;
   --success-soft: #16240A;
   --on-success: #111827;
-
-  color: var(--text);
-  background-color: var(--bg-color);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: var(--secondary);
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: var(--secondary-hover);
-}
-
-body {
-  margin: 0;
-  display: flex;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
+    color-scheme: light;
     --bg-color: #fafafa;
     --surface-1: #ffffff;
     --surface-2: #f3f4f6;
@@ -76,4 +46,28 @@ h1 {
 
     --success-soft: #F7FEE7;
   }
+}
+
+a {
+  font-weight: 500;
+  color: var(--secondary);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--secondary-hover);
+}
+
+body {
+  color: var(--text);
+  background-color: var(--bg-color);
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
 }
