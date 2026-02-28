@@ -1,5 +1,6 @@
 import './GoalsList.css';
 import Button from './Button.tsx';
+import { Pagination } from './Pagination.tsx';
 
 export function GoalsList() {
     return (
@@ -184,6 +185,7 @@ export function GoalsList() {
                 </div>
                 <Button>+</Button>
             </div>
+            <Pagination></Pagination>
         </section>
     )
 }

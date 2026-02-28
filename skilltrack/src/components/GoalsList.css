@@ -17,4 +17,5 @@ section {
     flex-direction: column;
     gap: 0.2rem;
     padding: 10px;
+    align-items: center;
 }
