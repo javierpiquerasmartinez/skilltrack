@@ -9,6 +9,9 @@ function Header() {
                 <a href="">Objetivos</a>
                 <a href="">Estadísticas</a>
             </nav>
+            <div>
+                <button className='theme-toggle'>🌙</button>
+            </div>
         </header>
     )
 }
