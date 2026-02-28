@@ -9,6 +9,10 @@
     border: 1px solid var(--border);
 }
 
+.nav-item:hover {
+    background-color: var(--surface-1-hover);
+}
+
 .pagination {
     display: flex;
     gap: 0.5rem;

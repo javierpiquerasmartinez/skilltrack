@@ -1,5 +1,5 @@
 import './GoalsList.css';
-import Button from './Button.tsx';
+import Button from './ButtonCTA.tsx';
 import { Pagination } from './Pagination.tsx';
 
 export function GoalsList() {
