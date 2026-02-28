@@ -1,0 +1,101 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Color variables */
+  --bg-color: #0B1220;
+  --surface-1: #111827;
+  --surface-2: #0F172A;
+  --border: #263244;
+  --text: #F9FAFB;
+  --text-muted: #9CA3AF;
+
+  /*Brand colors / actions: Primary BTN, CTA, Badges 'new', Points of Attention*/
+  --brand: #F97316;
+  --brand-hover: #EA580C;
+  --brand-active: #C2410C;
+  --brand-soft: #2A160A;
+
+  /*Secondary Colors: Top bar, Important links, Secondary BTN, Active tabs*/
+  --secondary: #1E3A8A;
+  --secondary-hover: #1D4ED8;
+  --secondary-active: #1E40AF;
+  --secondary-soft: #0B1B3A;
+
+  /*Success Colors: Completed actions, positive progress, checkmarks, success toasts*/
+  --success: #84CC16;
+  --success-hover: #65A30D;
+  --success-active: #4D7C0F;
+  --success-soft: #16240A;
+  --on-success: #111827;
+
+  color: var(--text);
+  background-color: var(--bg-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: var(--secondary);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--secondary-hover);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--brand);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  background-color: var(--brand-hover);
+  border: 1px solid var(--brand-soft)
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #fafafa;
+    --surface-1: #ffffff;
+    --surface-2: #f3f4f6;
+    --border: #e5e7eb;
+    --text: #111827;
+    --text-muted: #6b7280;
+
+    --brand-soft: #FFF7ED;
+
+    --secondary-soft: #EFF6FF;
+
+    --success-soft: #F7FEE7;
+  }
+}
