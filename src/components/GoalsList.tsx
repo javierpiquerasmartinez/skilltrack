@@ -2,6 +2,7 @@ import './GoalsList.css';
 import ButtonSecondary from './ButtonSecondary.tsx';
 import { Pagination } from './Pagination.tsx';
 import { useState } from 'react';
+import { GoalListItem } from './GoalListItem.tsx';
 
 export function GoalsList() {
 
@@ -14,14 +15,10 @@ export function GoalsList() {
     return (
         <section>
             <h1>Estos son tus objetivos 🎯</h1>
-            <div className='goal-list-item'>
-                <p>Objetivo 1</p>
-                <p>Ahorrar $10,000 dólares</p>
-                <div>
-                    Fecha de meta: 30 de junio de 2026
-                </div>
-                <ButtonSecondary>+</ButtonSecondary>
-            </div>
+            <GoalListItem
+                title="Objetivo 1"
+                description="Ahorrar $10,000 dólares"
+                dueDate="30 de junio de 2026"></GoalListItem>
 
             <div className='goal-list-item'>
                 <p>Objetivo 2</p>
@@ -194,6 +191,6 @@ export function GoalsList() {
                 <ButtonSecondary>+</ButtonSecondary>
             </div>
             <Pagination currentPage={currentPage} totalPages={10} onPageChange={handlePageChange}></Pagination>
-        </section>
+        </section >
     )
 }
