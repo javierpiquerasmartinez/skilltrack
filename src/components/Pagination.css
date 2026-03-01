@@ -19,6 +19,8 @@
     margin-top: 1rem;
 }
 
-.is-active {
+.is-active,
+.is-active:hover {
     background-color: var(--secondary-active);
+    color: var(--text);
 }
