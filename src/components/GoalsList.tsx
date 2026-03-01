@@ -3,6 +3,11 @@ import ButtonSecondary from './ButtonSecondary.tsx';
 import { Pagination } from './Pagination.tsx';
 
 export function GoalsList() {
+
+    const handlePageChange = (page: number) => {
+        console.log('Cambiar a la página:', page);
+    };
+
     return (
         <section>
             <h1>Estos son tus objetivos 🎯</h1>
@@ -185,7 +190,7 @@ export function GoalsList() {
                 </div>
                 <ButtonSecondary>+</ButtonSecondary>
             </div>
-            <Pagination></Pagination>
+            <Pagination currentPage={1} totalPages={10} onPageChange={handlePageChange}></Pagination>
         </section>
     )
 }
