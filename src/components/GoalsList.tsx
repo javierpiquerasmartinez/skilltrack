@@ -1,11 +1,14 @@
 import './GoalsList.css';
 import ButtonSecondary from './ButtonSecondary.tsx';
 import { Pagination } from './Pagination.tsx';
+import { useState } from 'react';
 
 export function GoalsList() {
 
+    const [currentPage, setCurrentPage] = useState(1);
+
     const handlePageChange = (page: number) => {
-        console.log('Cambiar a la página:', page);
+        setCurrentPage(page)
     };
 
     return (
@@ -190,7 +193,7 @@ export function GoalsList() {
                 </div>
                 <ButtonSecondary>+</ButtonSecondary>
             </div>
-            <Pagination currentPage={1} totalPages={10} onPageChange={handlePageChange}></Pagination>
+            <Pagination currentPage={currentPage} totalPages={10} onPageChange={handlePageChange}></Pagination>
         </section>
     )
 }
