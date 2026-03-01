@@ -7,7 +7,7 @@ export default function FirstGoalHero() {
             <div className="first-goal-hero">
                 <h1>Aún no hay objetivos por aquí...</h1>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-label="Empty state icon" width="80" height="80">
-                    <g stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+                    <g stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round">
                         <circle cx="56" cy="56" r="34" />
                         <path d="M80 80 L110 110" />
                         <circle cx="56" cy="56" r="20" />
