@@ -8,12 +8,14 @@ import { SearchForm } from './SearchForm.tsx';
 const RESULTS_PER_PAGE = 4;
 
 export function GoalsList() {
-    const [textFilter, setTextFilter] = useState('');
+    const [filters, setFilters] = useState({ type: '', search: '' });
     const [currentPage, setCurrentPage] = useState(1);
 
     const filteredGoals = goals.filter((goal) => {
-        return goal.title.toLowerCase().includes(textFilter.toLowerCase()) ||
-            goal.description.toLowerCase().includes(textFilter.toLowerCase());
+        const matchesSearch = goal.title.toLowerCase().includes(filters.search.toLowerCase()) ||
+            goal.description.toLowerCase().includes(filters.search.toLowerCase());
+        const matchesType = filters.type ? goal.type === filters.type : true;
+        return matchesSearch && matchesType;
     });
 
     const totalPages = Math.ceil(filteredGoals.length / RESULTS_PER_PAGE);
@@ -23,19 +25,15 @@ export function GoalsList() {
         setCurrentPage(page)
     };
 
-    const handleSearch = (filters: { type: string, search: string }) => {
-        console.log(filters);
-    }
-
-    const handleTextFilter = (text: string) => {
-        setTextFilter(text);
+    const handleSearch = (filters: { type?: string, search?: string }) => {
+        setFilters((prev) => ({ ...prev, ...filters }));
         setCurrentPage(1);
     }
 
     return (
         <section>
             <h1>Estos son tus objetivos 🎯</h1>
-            <SearchForm onSearch={handleSearch} onTextFilter={handleTextFilter}></SearchForm>
+            <SearchForm onSearch={handleSearch}></SearchForm>
             {
                 pagedGoals.map((goal) => {
                     return (

@@ -2,8 +2,8 @@ import { useId } from 'react';
 import styles from './SearchForm.module.css';
 
 export function SearchForm(
-    { onSearch, onTextFilter }:
-        { onSearch: (filters: { type: string, search: string }) => void, onTextFilter: (text: string) => void }) {
+    { onSearch }:
+        { onSearch: (filters: { type?: string, search: string }) => void }) {
 
     const idType = useId();
     const idSearch = useId();
@@ -22,7 +22,7 @@ export function SearchForm(
     }
 
     function handleTextFilter(event: React.ChangeEvent<HTMLInputElement>) {
-        onTextFilter(event.target.value);
+        onSearch({ search: event.target.value });
     }
 
     return (
@@ -38,7 +38,7 @@ export function SearchForm(
             <select className={styles.searchSelect} name={idType} id={idType}>
                 <option value="">Todos</option>
                 <option value="personal">Personal</option>
-                <option value="professional">Profesional</option>
+                <option value="profesional">Profesional</option>
             </select>
             <button className={styles.searchButton} type='submit'>Buscar</button>
         </form>
