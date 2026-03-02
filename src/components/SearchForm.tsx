@@ -1,7 +1,7 @@
 import { useId } from 'react';
 import styles from './SearchForm.module.css';
 
-export function SearchForm() {
+export function SearchForm({ onSearch }: { onSearch: (filters: { type: string, search: string }) => void }) {
     const idType = useId();
     const idSearch = useId();
 
@@ -15,7 +15,7 @@ export function SearchForm() {
             search: formData.get(idSearch) as string
         }
 
-        console.log(filters);
+        onSearch(filters);
     }
 
     return (
