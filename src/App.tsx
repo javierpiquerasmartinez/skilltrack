@@ -1,17 +1,24 @@
-import FirstGoalHero from './components/FirstGoalHero.tsx'
 import Header from './components/Header.tsx'
-import { GoalsList } from './components/GoalsList.tsx'
 import './App.css'
+import { NotFoundPage } from './pages/NotFoundPage.tsx';
+import { SearchPage } from './pages/SearchPage.tsx';
+import { HomePage } from './pages/HomePage.tsx';
 
 function App() {
+
+  const currentPath = window.location.pathname;
+  let page = <NotFoundPage></NotFoundPage>;
+
+  if (currentPath === '/') {
+    page = <HomePage></HomePage>
+  } else if (currentPath === '/search') {
+    page = <SearchPage></SearchPage>
+  }
 
   return (
     <>
       <Header></Header>
-      <main>
-        <FirstGoalHero></FirstGoalHero>
-        <GoalsList></GoalsList>
-      </main>
+      {page}
     </>
   )
 }
