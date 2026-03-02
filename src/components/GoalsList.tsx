@@ -3,6 +3,7 @@ import { Pagination } from './Pagination.tsx';
 import { useState } from 'react';
 import { GoalListItem } from './GoalListItem.tsx';
 import { goals } from '../data/goals.json';
+import { SearchForm } from './SearchForm.tsx';
 
 export function GoalsList() {
 
@@ -19,6 +20,7 @@ export function GoalsList() {
     return (
         <section>
             <h1>Estos son tus objetivos 🎯</h1>
+            <SearchForm></SearchForm>
             {
                 pagedGoals.map((goal) => {
                     return (
@@ -26,6 +28,7 @@ export function GoalsList() {
                             key={goal.id}
                             title={goal.title}
                             description={goal.description}
+                            type={goal.type}
                             dueDate={goal.dueDate}
                         />
                     )
