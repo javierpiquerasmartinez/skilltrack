@@ -1,7 +1,10 @@
 import { useId } from 'react';
 import styles from './SearchForm.module.css';
 
-export function SearchForm({ onSearch }: { onSearch: (filters: { type: string, search: string }) => void }) {
+export function SearchForm(
+    { onSearch, onTextFilter }:
+        { onSearch: (filters: { type: string, search: string }) => void, onTextFilter: (text: string) => void }) {
+
     const idType = useId();
     const idSearch = useId();
 
@@ -16,6 +19,10 @@ export function SearchForm({ onSearch }: { onSearch: (filters: { type: string, s
         }
 
         onSearch(filters);
+    }
+
+    function handleTextFilter(event: React.ChangeEvent<HTMLInputElement>) {
+        onTextFilter(event.target.value);
     }
 
     return (

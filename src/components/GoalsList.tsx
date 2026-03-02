@@ -17,10 +17,18 @@ export function GoalsList() {
         setCurrentPage(page)
     };
 
+    const handleSearch = (filters: { type: string, search: string }) => {
+        console.log(filters);
+    }
+
+    const handleTextFilter = (text: string) => {
+        console.log(text);
+    }
+
     return (
         <section>
             <h1>Estos son tus objetivos 🎯</h1>
-            <SearchForm></SearchForm>
+            <SearchForm onSearch={handleSearch} onTextFilter={handleTextFilter}></SearchForm>
             {
                 pagedGoals.map((goal) => {
                     return (
