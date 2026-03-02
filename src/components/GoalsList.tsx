@@ -5,13 +5,19 @@ import { GoalListItem } from './GoalListItem.tsx';
 import { goals } from '../data/goals.json';
 import { SearchForm } from './SearchForm.tsx';
 
-export function GoalsList() {
+const RESULTS_PER_PAGE = 4;
 
+export function GoalsList() {
+    const [textFilter, setTextFilter] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
 
-    const RESULTS_PER_PAGE = 4;
-    const totalPages = Math.ceil(goals.length / RESULTS_PER_PAGE);
-    const pagedGoals = goals.slice((currentPage - 1) * RESULTS_PER_PAGE, currentPage * RESULTS_PER_PAGE);
+    const filteredGoals = goals.filter((goal) => {
+        return goal.title.toLowerCase().includes(textFilter.toLowerCase()) ||
+            goal.description.toLowerCase().includes(textFilter.toLowerCase());
+    });
+
+    const totalPages = Math.ceil(filteredGoals.length / RESULTS_PER_PAGE);
+    const pagedGoals = filteredGoals.slice((currentPage - 1) * RESULTS_PER_PAGE, currentPage * RESULTS_PER_PAGE);
 
     const handlePageChange = (page: number) => {
         setCurrentPage(page)
@@ -22,7 +28,8 @@ export function GoalsList() {
     }
 
     const handleTextFilter = (text: string) => {
-        console.log(text);
+        setTextFilter(text);
+        setCurrentPage(1);
     }
 
     return (
