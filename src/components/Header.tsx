@@ -3,10 +3,14 @@ import './Header.css'
 function Header() {
     return (
         <header>
-            <h3>SkillTrack</h3>
+            <a href="/">
+                <h3>
+                    SkillTrack
+                </h3>
+            </a>
             <nav>
                 <a href="">Dashboard</a>
-                <a href="">Objetivos</a>
+                <a href="/search">Objetivos</a>
                 <a href="">Estadísticas</a>
             </nav>
             <div>
