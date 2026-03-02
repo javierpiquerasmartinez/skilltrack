@@ -27,7 +27,14 @@ export function SearchForm(
 
     return (
         <form onSubmit={handleSubmit} className={styles.searchForm}>
-            <input className={styles.searchInput} type="text" placeholder='Busca un objetivo...' name={idSearch} id={idSearch} />
+            <input
+                className={styles.searchInput}
+                type="text"
+                placeholder='Busca un objetivo...'
+                name={idSearch}
+                id={idSearch}
+                onChange={handleTextFilter}
+            />
             <select className={styles.searchSelect} name={idType} id={idType}>
                 <option value="">Todos</option>
                 <option value="personal">Personal</option>
