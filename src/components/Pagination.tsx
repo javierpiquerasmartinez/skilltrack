@@ -25,7 +25,7 @@ export function Pagination({ currentPage = 1, totalPages = 1, onPageChange }: { 
             </a>
             {pages.map(page => {
                 return (
-                    <a href="" className={`nav-item ${currentPage === page ? 'is-active' : ''}`} onClick={(event) => handlePageChange?.(event, page)}>{page}</a>
+                    <a key={`nav-anchor-${page}`} href="" className={`nav-item ${currentPage === page ? 'is-active' : ''}`} onClick={(event) => handlePageChange?.(event, page)}>{page}</a>
                 )
             })}
             <a className='nav-item' href="" onClick={handleNextPage}>
