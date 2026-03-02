@@ -1,6 +1,6 @@
 import './GoalsList.css';
 import { Pagination } from './Pagination.tsx';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { GoalListItem } from './GoalListItem.tsx';
 import { goals } from '../data/goals.json';
 import { SearchForm } from './SearchForm.tsx';
@@ -10,6 +10,10 @@ const RESULTS_PER_PAGE = 5;
 export function GoalsList() {
     const [filters, setFilters] = useState({ type: '', search: '' });
     const [currentPage, setCurrentPage] = useState(1);
+
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [filters]);
 
     const filteredGoals = goals.filter((goal) => {
         const matchesSearch = goal.title.toLowerCase().includes(filters.search.toLowerCase()) ||
@@ -27,7 +31,6 @@ export function GoalsList() {
 
     const handleSearch = (filters: { type?: string, search?: string }) => {
         setFilters((prev) => ({ ...prev, ...filters }));
-        setCurrentPage(1);
     }
 
     return (
