@@ -5,7 +5,7 @@ import { GoalListItem } from './GoalListItem.tsx';
 import { goals } from '../data/goals.json';
 import { SearchForm } from './SearchForm.tsx';
 
-const RESULTS_PER_PAGE = 4;
+const RESULTS_PER_PAGE = 5;
 
 export function GoalsList() {
     const [filters, setFilters] = useState({ type: '', search: '' });
