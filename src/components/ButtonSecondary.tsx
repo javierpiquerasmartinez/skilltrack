@@ -1,8 +1,10 @@
 import './ButtonSecondary.css'
 
-function ButtonSecondary({ children }: { children: React.ReactNode }) {
+function ButtonSecondary({ children, ...props }: { children: React.ReactNode } & React.ButtonHTMLAttributes<HTMLButtonElement>) {
     return (
-        <button className='btn-secondary'>{children}</button>
+        <button className='btn-secondary' {...props}>
+            {children}
+        </button>
     )
 }
 

@@ -1,6 +1,11 @@
 import ButtonSecondary from "./ButtonSecondary";
 
 export function GoalListItem({ title, description, dueDate, type }: { title: string; description: string; dueDate: string, type: string }) {
+
+  const handleClick = () => {
+    console.log('show details')
+  }
+
   return (
     <div className='goal-list-item'>
       <p>{title}</p>
@@ -9,7 +14,7 @@ export function GoalListItem({ title, description, dueDate, type }: { title: str
       <div>
         Fecha de meta: {dueDate}
       </div>
-      <ButtonSecondary>+</ButtonSecondary>
+      <ButtonSecondary onClick={handleClick}>+</ButtonSecondary>
     </div>
   )
 }
