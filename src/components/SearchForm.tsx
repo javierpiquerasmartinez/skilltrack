@@ -1,6 +1,8 @@
 import { useId } from 'react';
 import styles from './SearchForm.module.css';
 
+let timeoutId: number | null = null;
+
 function useSearchForm({ idType, idSearch, onSearch }: { idType: string, idSearch: string, onSearch: (filters: { type?: string, search?: string }) => void }) {
     const handleChange = (event: React.FormEvent<HTMLFormElement>): void => {
         event.preventDefault();
@@ -9,7 +11,17 @@ function useSearchForm({ idType, idSearch, onSearch }: { idType: string, idSearc
             type: formData.get(idType) as string,
             search: formData.get(idSearch) as string
         }
-        onSearch(filters);
+        if (event.target instanceof HTMLSelectElement) {
+            onSearch(filters);
+            return;
+        }
+        if (timeoutId) {
+            clearTimeout(timeoutId);
+        }
+        timeoutId = setTimeout(() => {
+            onSearch(filters);
+        }, 500);
+
     }
     return handleChange;
 }
